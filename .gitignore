@@ -60,3 +60,10 @@ Loans.Tests/bin\
 *.testlog
 *.cache
 *.tmp
+.vs/Loans/v16/.suo
+*.testlog
+.vs/Loans/v16/.suo
+.vs/Loans/v16/TestStore/0/000.testlog
+Loans.Tests/bin/Debug/netcoreapp3.1/nunit_random_seed.tmp
+Loans.Tests/obj/Debug/netcoreapp3.1/Loans.Tests.csprojAssemblyReference.cache
+Loans/obj/Debug/netcoreapp2.1/Loans.csproj.FileListAbsolute.txt
