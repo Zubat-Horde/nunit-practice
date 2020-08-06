@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DGKoOoAkD/8B41AQ50h1scmBE4TEzzWTQUxezCnkAbv4WoJArI7pDKRgZtIbFY2zClWvg8Eiugv3WBlXo2brtg==",
+  "dgSpecHash": "B0rpwOZbhOHgKNHDiGbarahrMTE8KTUoz2fewo7/jA9gvUSbapx/XVltBo0BbIgRBb0tiAM2BByxSnaIPseGSw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ctj0709\\Downloads\\02\\demos\\before\\01TestProject\\Loans.Tests\\Loans.Tests.csproj",
+  "projectFilePath": "C:\\Users\\ctj0709\\repos\\nunit-practice\\Loans.Tests\\Loans.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ctj0709\\.nuget\\packages\\microsoft.codecoverage\\16.6.1\\microsoft.codecoverage.16.6.1.nupkg.sha512",
     "C:\\Users\\ctj0709\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

@@ -50,3 +50,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+Loans/obj\
+Loans/bin\
+Loans.Tests/obj\
+Loans.Tests/bin\

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ctj0709\\Downloads\\02\\demos\\before\\01TestProject\\Loans\\Loans.csproj": {}
+    "C:\\Users\\ctj0709\\repos\\nunit-practice\\Loans\\Loans.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ctj0709\\Downloads\\02\\demos\\before\\01TestProject\\Loans\\Loans.csproj": {
+    "C:\\Users\\ctj0709\\repos\\nunit-practice\\Loans\\Loans.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ctj0709\\Downloads\\02\\demos\\before\\01TestProject\\Loans\\Loans.csproj",
+        "projectUniqueName": "C:\\Users\\ctj0709\\repos\\nunit-practice\\Loans\\Loans.csproj",
         "projectName": "Loans",
-        "projectPath": "C:\\Users\\ctj0709\\Downloads\\02\\demos\\before\\01TestProject\\Loans\\Loans.csproj",
+        "projectPath": "C:\\Users\\ctj0709\\repos\\nunit-practice\\Loans\\Loans.csproj",
         "packagesPath": "C:\\Users\\ctj0709\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ctj0709\\Downloads\\02\\demos\\before\\01TestProject\\Loans\\obj\\",
+        "outputPath": "C:\\Users\\ctj0709\\repos\\nunit-practice\\Loans\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ctj0709\\AppData\\Roaming\\NuGet\\NuGet.Config",

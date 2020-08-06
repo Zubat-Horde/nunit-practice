@@ -4646,11 +4646,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ctj0709\\Downloads\\02\\demos\\before\\01TestProject\\Loans.Tests\\Loans.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\ctj0709\\repos\\nunit-practice\\Loans.Tests\\Loans.Tests.csproj",
       "projectName": "Loans.Tests",
-      "projectPath": "C:\\Users\\ctj0709\\Downloads\\02\\demos\\before\\01TestProject\\Loans.Tests\\Loans.Tests.csproj",
+      "projectPath": "C:\\Users\\ctj0709\\repos\\nunit-practice\\Loans.Tests\\Loans.Tests.csproj",
       "packagesPath": "C:\\Users\\ctj0709\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ctj0709\\Downloads\\02\\demos\\before\\01TestProject\\Loans.Tests\\obj\\",
+      "outputPath": "C:\\Users\\ctj0709\\repos\\nunit-practice\\Loans.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ctj0709\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4666,8 +4666,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\ctj0709\\Downloads\\02\\demos\\before\\01TestProject\\Loans\\Loans.csproj": {
-              "projectPath": "C:\\Users\\ctj0709\\Downloads\\02\\demos\\before\\01TestProject\\Loans\\Loans.csproj"
+            "C:\\Users\\ctj0709\\repos\\nunit-practice\\Loans\\Loans.csproj": {
+              "projectPath": "C:\\Users\\ctj0709\\repos\\nunit-practice\\Loans\\Loans.csproj"
             }
           }
         }
