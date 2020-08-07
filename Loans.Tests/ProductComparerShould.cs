@@ -6,6 +6,7 @@ using System.Text;
 
 namespace Loans.Tests
 {
+    [Category("Product Comparison")]
     public class ProductComparerShould
     {
         [Test]
