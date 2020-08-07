@@ -198,3 +198,4 @@ C:\Users\ctj0709\repos\nunit-practice\Loans.Tests\obj\Debug\netcoreapp3.1\Loans.
 C:\Users\ctj0709\repos\nunit-practice\Loans.Tests\obj\Debug\netcoreapp3.1\Loans.Tests.dll
 C:\Users\ctj0709\repos\nunit-practice\Loans.Tests\obj\Debug\netcoreapp3.1\Loans.Tests.pdb
 C:\Users\ctj0709\repos\nunit-practice\Loans.Tests\obj\Debug\netcoreapp3.1\Loans.Tests.genruntimeconfig.cache
+C:\Users\ctj0709\repos\nunit-practice\Loans.Tests\bin\Debug\netcoreapp3.1\Data.csv
