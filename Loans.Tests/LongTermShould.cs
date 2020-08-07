@@ -9,6 +9,7 @@ namespace Loans.Tests
     public class LongTermShould
     {
         [Test]
+        [Ignore("For demo purpose")]
         public void ReturnTermInMonths()
         {
             var sut = new LoanTerm(1);
