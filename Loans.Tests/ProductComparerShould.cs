@@ -67,11 +67,13 @@ namespace Loans.Tests
         {
             List<MonthlyRepaymentComparison> comparisons = sut.CompareMonthlyRepayments(new LoanTerm(30));
 
-            Assert.That(comparisons, Has.Exactly(1)
-                .Matches<MonthlyRepaymentComparison>(
-                    item => item.ProductName == "a" &&
-                            item.InterestRate == 1 &&
-                            item.MonthlyRepayment > 0));
+            //Assert.That(comparisons, Has.Exactly(1)
+            //    .Matches<MonthlyRepaymentComparison>(
+            //        item => item.ProductName == "a" &&
+            //                item.InterestRate == 1 &&
+            //                item.MonthlyRepayment > 0));
+
+            Assert.That(comparisons, Has.Exactly(1).Matches(new MonthlyRepaymentGreatThanZeroConstraint("a", 1)));
         }
     }
 }
