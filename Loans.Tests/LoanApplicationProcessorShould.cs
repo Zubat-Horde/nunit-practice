@@ -30,6 +30,7 @@ namespace Loans.Tests
             var application = new LoanApplication(42, product, amount, "Sarah", 25, "133 Pluralsight Drive, Draper, Utah", 65_000);
 
             var mockIdentityVerifier = new Mock<IIdentityVerifier>();
+            // mockIdentityVerifier.Setup(x => x.Validate(It.IsAny<string>(), It.IsAny<int>(), It.IsAny<string>())).Returns(true);
             mockIdentityVerifier.Setup(x => x.Validate("Sarah", 25, "133 Pluralsight Drive, Draper, Utah")).Returns(true);
 
             var mockCreditScorer = new Mock<ICreditScorer>();
