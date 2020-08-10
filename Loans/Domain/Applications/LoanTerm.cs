@@ -15,7 +15,8 @@ namespace Loans.Domain.Applications
         {
             if (years < 1)
             {
-                throw new ArgumentOutOfRangeException(nameof(years), "Please specify a value greater than 0.");
+                throw new ArgumentOutOfRangeException(nameof(years), 
+                    "Please specify a value greater than 0.");
             }
 
             Years = years;
