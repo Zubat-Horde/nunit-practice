@@ -48,5 +48,21 @@ namespace Loans.Tests
 
             Assert.That(application.GetIsAccepted(), Is.True);
         }
+
+        [Test]
+        public void NullReturnExample()
+        {
+            var mock = new Mock<INullExample>();
+            mock.Setup(x => x.SomeMethod());
+
+            string mockReturnValue = mock.Object.SomeMethod();
+
+            Assert.That(mockReturnValue, Is.Null);
+        }
+    }
+
+    public interface INullExample
+    {
+        string SomeMethod();
     }
 }
