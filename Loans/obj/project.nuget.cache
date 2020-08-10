@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Wzu17gdRCFgOnNooLxCt+6F+e7aaNO5JUrKGsAsENE0nDt4CSI17/fYOeMZDHNYeniqmETZxVohOnPIFq1yXbA==",
+  "dgSpecHash": "vx0orY8/7ILaOVrUiYG8Qv3JlYn4CeXQpvb79h/D1wRJT6z472hbWrrgTFBJx8udpl5zQtpse6Yo4JYgkYBkuQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ctj0709\\repos\\nunit-practice\\Loans\\Loans.csproj",
+  "projectFilePath": "C:\\Users\\ctj0709\\repos\\nunit-practice-part2\\Loans\\Loans.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ctj0709\\.nuget\\packages\\microsoft.netcore.app\\2.1.0\\microsoft.netcore.app.2.1.0.nupkg.sha512",
     "C:\\Users\\ctj0709\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.1.0\\microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",
