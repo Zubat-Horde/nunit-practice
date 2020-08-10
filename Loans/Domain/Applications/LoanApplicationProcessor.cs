@@ -36,14 +36,16 @@ namespace Loans.Domain.Applications
                 return;
             }
 
+            IdentityVerificationStatus status = null;
+
             _identityVerifier.Initialize();
 
             _identityVerifier.Validate(application.GetApplicantName(), 
                                                              application.GetApplicantAge(), 
                                                              application.GetApplicantAddress(),
-                                                             out  var isValidIdentity);
+                                                             ref status);
 
-            if (!isValidIdentity)
+            if (!status.Passed)
             {
                 application.Decline();
                 return;

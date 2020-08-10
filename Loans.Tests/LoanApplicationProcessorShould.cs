@@ -22,6 +22,8 @@ namespace Loans.Tests
             Assert.That(application.GetIsAccepted(), Is.False);
         }
 
+        delegate void ValidateCallBack(string applicantName, int applicantAge, string applicantAddress, ref IdentityVerificationStatus status);
+
         [Test]
         public void Accept()
         {
@@ -32,8 +34,12 @@ namespace Loans.Tests
             var mockIdentityVerifier = new Mock<IIdentityVerifier>();
             // mockIdentityVerifier.Setup(x => x.Validate(It.IsAny<string>(), It.IsAny<int>(), It.IsAny<string>())).Returns(true);
             // mockIdentityVerifier.Setup(x => x.Validate("Sarah", 25, "133 Pluralsight Drive, Draper, Utah")).Returns(true);
-            var isValidOutValue = true;
-            mockIdentityVerifier.Setup(x => x.Validate("Sarah", 25, "133 Pluralsight Drive, Draper, Utah", out isValidOutValue));
+            // var isValidOutValue = true;
+            // mockIdentityVerifier.Setup(x => x.Validate("Sarah", 25, "133 Pluralsight Drive, Draper, Utah", out isValidOutValue));
+
+            mockIdentityVerifier.Setup(x => x.Validate("Sarah", 25, "133 Pluralsight Drive, Draper, Utah", ref It.Ref<IdentityVerificationStatus>.IsAny))
+            .Callback(new ValidateCallBack((string applicantname, int applicantAge, string applicantAddress, ref IdentityVerificationStatus status)
+            => status = new IdentityVerificationStatus(true)));
 
             var mockCreditScorer = new Mock<ICreditScorer>();
 
