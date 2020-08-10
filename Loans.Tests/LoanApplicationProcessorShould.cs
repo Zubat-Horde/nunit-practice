@@ -31,7 +31,9 @@ namespace Loans.Tests
 
             var mockIdentityVerifier = new Mock<IIdentityVerifier>();
             // mockIdentityVerifier.Setup(x => x.Validate(It.IsAny<string>(), It.IsAny<int>(), It.IsAny<string>())).Returns(true);
-            mockIdentityVerifier.Setup(x => x.Validate("Sarah", 25, "133 Pluralsight Drive, Draper, Utah")).Returns(true);
+            // mockIdentityVerifier.Setup(x => x.Validate("Sarah", 25, "133 Pluralsight Drive, Draper, Utah")).Returns(true);
+            var isValidOutValue = true;
+            mockIdentityVerifier.Setup(x => x.Validate("Sarah", 25, "133 Pluralsight Drive, Draper, Utah", out isValidOutValue));
 
             var mockCreditScorer = new Mock<ICreditScorer>();
 

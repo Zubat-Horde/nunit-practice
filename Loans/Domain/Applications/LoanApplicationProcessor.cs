@@ -38,9 +38,10 @@ namespace Loans.Domain.Applications
 
             _identityVerifier.Initialize();
 
-            var isValidIdentity = _identityVerifier.Validate(application.GetApplicantName(), 
+            _identityVerifier.Validate(application.GetApplicantName(), 
                                                              application.GetApplicantAge(), 
-                                                             application.GetApplicantAddress());
+                                                             application.GetApplicantAddress(),
+                                                             out  var isValidIdentity);
 
             if (!isValidIdentity)
             {
@@ -49,14 +50,14 @@ namespace Loans.Domain.Applications
             }
 
 
-            _creditScorer.CalculateScore(application.GetApplicantName(), 
-                                         application.GetApplicantAddress());
+            //_creditScorer.CalculateScore(application.GetApplicantName(), 
+            //                             application.GetApplicantAddress());
 
-            if (_creditScorer.Score < MinimumCreditScore)
-            {
-                application.Decline();
-                return;
-            }
+            //if (_creditScorer.Score < MinimumCreditScore)
+            //{
+            //    application.Decline();
+            //    return;
+            //}
 
             application.Accept();
         }

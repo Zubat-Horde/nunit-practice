@@ -15,4 +15,3 @@ C:\Users\ctj0709\repos\nunit-practice\Loans\obj\Debug\netcoreapp2.1\Loans.Assemb
 C:\Users\ctj0709\repos\nunit-practice\Loans\obj\Debug\netcoreapp2.1\Loans.csproj.CoreCompileInputs.cache
 C:\Users\ctj0709\repos\nunit-practice\Loans\obj\Debug\netcoreapp2.1\Loans.dll
 C:\Users\ctj0709\repos\nunit-practice\Loans\obj\Debug\netcoreapp2.1\Loans.pdb
-C:\Users\ctj0709\repos\nunit-practice\Loans\obj\Debug\netcoreapp2.1\Loans.csprojAssemblyReference.cache
