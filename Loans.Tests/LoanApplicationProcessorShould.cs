@@ -21,5 +21,23 @@ namespace Loans.Tests
 
             Assert.That(application.GetIsAccepted(), Is.False);
         }
+
+        [Test]
+        public void Accept()
+        {
+            LoanProduct product = new LoanProduct(99, "Loan", 5.25m);
+            LoanAmount amount = new LoanAmount("USD", 200_000);
+            var application = new LoanApplication(42, product, amount, "Sarah", 25, "133 Pluralsight Drive, Draper, Utah", 65_000);
+
+            var mockIdentityVerifier = new Mock<IIdentityVerifier>();
+            mockIdentityVerifier.Setup(x => x.Validate("Sarah", 25, "133 Pluralsight Drive, Draper, Utah")).Returns(true);
+
+            var mockCreditScorer = new Mock<ICreditScorer>();
+
+            var sut = new LoanApplicationProcessor(mockIdentityVerifier.Object, mockCreditScorer.Object);
+            sut.Process(application);
+
+            Assert.That(application.GetIsAccepted(), Is.True);
+        }
     }
 }
