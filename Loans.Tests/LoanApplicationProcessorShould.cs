@@ -36,11 +36,13 @@ namespace Loans.Tests
 
             var mockCreditScorer = new Mock<ICreditScorer>();
             mockCreditScorer.Setup(x => x.ScoreResult.ScoreValue.Score).Returns(300);
+            mockCreditScorer.SetupProperty(x => x.Count);
 
             var sut = new LoanApplicationProcessor(mockIdentityVerifier.Object, mockCreditScorer.Object);
             sut.Process(application);
 
             Assert.That(application.GetIsAccepted(), Is.True);
+            Assert.That(mockCreditScorer.Object.Count, Is.EqualTo(1));
         }
 
         [Test]
