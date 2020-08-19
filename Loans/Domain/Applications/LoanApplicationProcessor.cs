@@ -36,30 +36,27 @@ namespace Loans.Domain.Applications
                 return;
             }
 
-            IdentityVerificationStatus status = null;
-
             _identityVerifier.Initialize();
 
-            _identityVerifier.Validate(application.GetApplicantName(), 
+            var isValidIdentity = _identityVerifier.Validate(application.GetApplicantName(), 
                                                              application.GetApplicantAge(), 
-                                                             application.GetApplicantAddress(),
-                                                             ref status);
+                                                             application.GetApplicantAddress());
 
-            if (!status.Passed)
+            if (!isValidIdentity)
             {
                 application.Decline();
                 return;
             }
 
 
-            //_creditScorer.CalculateScore(application.GetApplicantName(), 
-            //                             application.GetApplicantAddress());
+            _creditScorer.CalculateScore(application.GetApplicantName(),
+                                         application.GetApplicantAddress());
 
-            //if (_creditScorer.Score < MinimumCreditScore)
-            //{
-            //    application.Decline();
-            //    return;
-            //}
+            if (_creditScorer.Score < MinimumCreditScore)
+            {
+                application.Decline();
+                return;
+            }
 
             application.Accept();
         }

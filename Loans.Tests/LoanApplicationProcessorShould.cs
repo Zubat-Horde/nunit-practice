@@ -32,16 +32,10 @@ namespace Loans.Tests
             var application = new LoanApplication(42, product, amount, "Sarah", 25, "133 Pluralsight Drive, Draper, Utah", 65_000);
 
             var mockIdentityVerifier = new Mock<IIdentityVerifier>();
-            // mockIdentityVerifier.Setup(x => x.Validate(It.IsAny<string>(), It.IsAny<int>(), It.IsAny<string>())).Returns(true);
-            // mockIdentityVerifier.Setup(x => x.Validate("Sarah", 25, "133 Pluralsight Drive, Draper, Utah")).Returns(true);
-            // var isValidOutValue = true;
-            // mockIdentityVerifier.Setup(x => x.Validate("Sarah", 25, "133 Pluralsight Drive, Draper, Utah", out isValidOutValue));
-
-            mockIdentityVerifier.Setup(x => x.Validate("Sarah", 25, "133 Pluralsight Drive, Draper, Utah", ref It.Ref<IdentityVerificationStatus>.IsAny))
-            .Callback(new ValidateCallBack((string applicantname, int applicantAge, string applicantAddress, ref IdentityVerificationStatus status)
-            => status = new IdentityVerificationStatus(true)));
+            mockIdentityVerifier.Setup(x => x.Validate("Sarah", 25, "133 Pluralsight Drive, Draper, Utah")).Returns(true);
 
             var mockCreditScorer = new Mock<ICreditScorer>();
+            mockCreditScorer.Setup(x => x.Score).Returns(300);
 
             var sut = new LoanApplicationProcessor(mockIdentityVerifier.Object, mockCreditScorer.Object);
             sut.Process(application);
