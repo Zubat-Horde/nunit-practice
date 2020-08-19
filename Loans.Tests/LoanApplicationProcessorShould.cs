@@ -35,7 +35,7 @@ namespace Loans.Tests
             mockIdentityVerifier.Setup(x => x.Validate("Sarah", 25, "133 Pluralsight Drive, Draper, Utah")).Returns(true);
 
             var mockCreditScorer = new Mock<ICreditScorer>();
-            mockCreditScorer.Setup(x => x.Score).Returns(300);
+            mockCreditScorer.Setup(x => x.ScoreResult.ScoreValue.Score).Returns(300);
 
             var sut = new LoanApplicationProcessor(mockIdentityVerifier.Object, mockCreditScorer.Object);
             sut.Process(application);
